@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf dist",
@@ -30,6 +30,10 @@
     "name": "Isaac Valdez",
     "email": "isaac_valdez@msn.com",
     "url": "https://i12345.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-essentials/ava-config.git"
   },
   "license": "MIT"
 }

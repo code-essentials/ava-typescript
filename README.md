@@ -12,7 +12,7 @@ import { config } from 'ava-config'
 export default config
 ```
 
-configure the following tasks for the package's `package.json`
+configure your package's `package.json` to look similar to the following
 
 ```json
 {
@@ -23,7 +23,7 @@ configure the following tasks for the package's `package.json`
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf dist",
@@ -43,7 +43,7 @@ configure the following tasks for the package's `package.json`
 }
 ```
 
-these scripts work in the following sections.
+these scripts continue to work in the following sections.
 
 ## debugging in vscode
 
