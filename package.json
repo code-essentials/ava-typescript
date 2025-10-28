@@ -1,0 +1,35 @@
+{
+  "name": "@code-essentials/ava-config",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm run clean",
+    "prebuild:debug": "pnpm run clean",
+    "build": "tsc",
+    "build:debug": "tsc -p tsconfig.debug.json",
+    "pretest": "pnpm run build:debug",
+    "test": "ava",
+    "prepublishOnly": "pnpm test && pnpm run build"
+  },
+  "dependencies": {
+    "ava": "^6.4.1",
+    "@ava/typescript": "^6.0.0"
+  },
+  "devDependencies": {
+    "@code-essentials/tsconfig": "^1.0.3",
+    "typescript": "^5.9.2"
+  },
+  "author": {
+    "name": "Isaac Valdez",
+    "email": "isaac_valdez@msn.com",
+    "url": "https://i12345.github.io"
+  },
+  "license": "MIT"
+}
