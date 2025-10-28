@@ -1,4 +1,4 @@
-# ava-config
+# ava-typescript
 
 [ava](https://github.com/avajs/ava/) is a test framework for javascript and typescript. this package provides a configuration for easily using typescript with ava in an individual package, debugging in vscode, and in a pnpm workspace/monorepo.
 
@@ -7,7 +7,7 @@
 to use this configuration in a package, add this `ava-config` to the project's dependencies, and in the package's root put `config.js`
 
 ```javascript
-import { config } from 'ava-config'
+import { config } from '@code-essentials/ava-config'
 
 export default config
 ```
