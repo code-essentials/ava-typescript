@@ -1,5 +1,5 @@
 {
-  "name": "@code-essentials/ava-config",
+  "name": "@code-essentials/ava-typescript",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code-essentials/ava-config.git"
+    "url": "https://github.com/code-essentials/ava-typescript.git"
   },
   "license": "MIT"
 }
