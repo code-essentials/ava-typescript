@@ -36,9 +36,9 @@ configure your package's `package.json` to look similar to the following
     "prepublishOnly": "pnpm test && pnpm run build"
   },
   "devDependencies": {
-    "@ava/typescript": "^6.0",
-    "ava": "^6.4",
-    "typescript": "^5.9"
+    "@ava/typescript": "^6.0.0",
+    "ava": "^6.4.0",
+    "typescript": "^5.9.0"
   },
 }
 ```
@@ -142,8 +142,8 @@ in root `package.json`
     "test": "turbo run test:run --continue=dependencies-successful"
   },
   "devDependencies": {
-    "turbo": "^2.5",
-    "typescript": "^5.9"
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.0"
   },
 }
 ```
