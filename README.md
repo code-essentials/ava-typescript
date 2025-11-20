@@ -59,12 +59,29 @@ to let the package be debugged with vscode, put the following two files in its `
             "request": "launch",
             "runtimeArgs": [
                 "run-script",
-                "test"
+                "test:run"
             ],
             "runtimeExecutable": "pnpm",
             "sourceMaps": true,
             "pauseForSourceMap": true,
-            "preLaunchTask": "npm: build:debug",
+            "preLaunchTask": "npm: pretest (build:debug)",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "test (no build)",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "test:run"
+            ],
+            "runtimeExecutable": "pnpm",
+            "sourceMaps": true,
+            "pauseForSourceMap": true,
+            // "preLaunchTask": "npm: pretest (build:debug)",
             "internalConsoleOptions": "neverOpen",
             "skipFiles": [
                 "<node_internals>/**"
@@ -82,12 +99,12 @@ to let the package be debugged with vscode, put the following two files in its `
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "npm: build:debug",
+            "label": "npm: pretest (build:debug)",
             "type": "shell",
             "command": "npm",
             "args": [
                 "run-script",
-                "build:debug",
+                "pretest",
             ],
             "problemMatcher": [
                 "$tsc"
