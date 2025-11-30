@@ -31,7 +31,7 @@ configure your package's `package.json` to look similar to the following
                 "clean": "rm -rf dist",
                 "prebuild": "pnpm run clean",
                 "prebuild:debug": "pnpm run clean",
-                "build": "tsc",
+                "build": "tsc -p tsconfig.prod.json",
                 "build:debug": "tsc -p tsconfig.debug.json",
                 "pretest": "pnpm run build:debug",
                 "test": "ava",
