@@ -9,7 +9,8 @@ export const config = {
     ],
     typescript: {
         rewritePaths: {
-            "src/": "dist/"
+            "src/": "dist/src/",
+            "test/": "dist/test/",
         },
         extensions: [
             "ts"

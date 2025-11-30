@@ -19,11 +19,11 @@
     "prepublishOnly": "pnpm test && pnpm run build"
   },
   "dependencies": {
-    "ava": "^6.4.1",
-    "@ava/typescript": "^6.0.0"
+    "@ava/typescript": "^6.0.0",
+    "ava": "^6.4.1"
   },
   "devDependencies": {
-    "@code-essentials/tsconfig": "^1.0.3",
+    "@code-essentials/tsconfig": "file:../tsconfig",
     "typescript": "^5.9.2"
   },
   "author": {
