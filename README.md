@@ -16,30 +16,34 @@ configure your package's `package.json` to look similar to the following
 
 ```json
 {
-  "name": "...",
-  "version": "...",
-  "description": "...",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "clean": "rm -rf dist",
-    "prebuild": "pnpm run clean",
-    "prebuild:debug": "pnpm run clean",
-    "build": "tsc",
-    "build:debug": "tsc -p tsconfig.debug.json",
-    "pretest": "pnpm run build:debug",
-    "test": "ava",
-    "prepublishOnly": "pnpm test && pnpm run build"
-  },
-  "devDependencies": {
-    "@ava/typescript": "^6.0.0",
-    "ava": "^6.4.0",
-    "typescript": "^5.9.0"
-  },
+    "configurations": [
+        {
+            "name": "...",
+            "version": "...",
+            "description": "...",
+            "type": "module",
+            "main": "./dist/index.js",
+            "types": "./dist/index.d.ts",
+            "files": [
+                "dist"
+            ],
+            "scripts": {
+                "clean": "rm -rf dist",
+                "prebuild": "pnpm run clean",
+                "prebuild:debug": "pnpm run clean",
+                "build": "tsc",
+                "build:debug": "tsc -p tsconfig.debug.json",
+                "pretest": "pnpm run build:debug",
+                "test": "ava",
+                "prepublishOnly": "pnpm test && pnpm run build"
+            },
+            "devDependencies": {
+                "@ava/typescript": "^6.0.0",
+                "ava": "^6.4.0",
+                "typescript": "^5.9.0"
+            },
+        }
+    ]
 }
 ```
 
