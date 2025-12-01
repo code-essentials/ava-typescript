@@ -1,6 +1,6 @@
 {
   "name": "@code-essentials/ava-typescript",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,10 +12,12 @@
     "clean": "rm -rf dist",
     "prebuild": "pnpm run clean",
     "prebuild:debug": "pnpm run clean",
-    "build": "tsc -p tsconfig.prod.json",
+    "build": "tsc  -p tsconfig.prod.json",
     "build:debug": "tsc -p tsconfig.debug.json",
     "pretest": "pnpm run build:debug",
-    "test": "ava",
+    "test": "pnpm run test:run",
+    "pretest:run": "",
+    "test:run": "ava",
     "prepublishOnly": "pnpm test && pnpm run build"
   },
   "dependencies": {
@@ -23,7 +25,7 @@
     "ava": "^6.4.1"
   },
   "devDependencies": {
-    "@code-essentials/tsconfig": "file:../tsconfig",
+    "@code-essentials/tsconfig": "^1.2.1",
     "typescript": "^5.9.2"
   },
   "author": {
